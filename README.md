@@ -1,4 +1,4 @@
-# AI Research Agent
+# VeriCite
 
 An automated **literature review system** that ingests academic papers from Semantic Scholar, stores them in a hybrid vector/full-text search database, and answers research questions through a multi-agent LangGraph pipeline.
 
