@@ -1,0 +1,16 @@
+requests
+SQLAlchemy
+psycopg2-binary
+pgvector
+sentence-transformers
+PyMuPDF
+pydantic
+
+langchain
+langgraph
+langchain-groq
+langchain-core
+langchain-community
+
+flask
+gunicorn

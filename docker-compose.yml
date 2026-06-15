@@ -1,0 +1,21 @@
+services:
+  db:
+    image: pgvector/pgvector:pg17 # pg17 also available; ships pgvector precompiled
+    container_name: rag-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: rag
+    ports:
+      - "5432:5432"
+    volumes:
+      - rag_pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d rag" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  rag_pgdata:
